@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+/*  
+ 변수의 범위
+ 1. Java와 같은 블록 scope는 없다. 
+ 2. 하지만, var를 사용하면 function scope가 된다.
+ 3. let(es6), const(es6)는 Block Scope가 된다. 
+ */
+ 
+ var i = 100;
+ var f = function(){
+	 /* j = 100; // 전역 스코프  */
+	 var i = 20;
+	 j = 100;
+	 
+	 console.log(i);
+	 i = j-i;
+	 console.log(i);
+ }
+ f();
+ console.log(i);
+</script>
+</head>
+<body>
+	<h1>변수의 범위</h1>
+</body>
+</html>

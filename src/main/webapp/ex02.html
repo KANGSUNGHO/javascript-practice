@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+/*
+ 변수와 데이터 타입
+
+[기본타입(pimitive type), 유사객체]
+1. number
+2. boolean
+3. string
+4. undefined
+
+
+*/
+
+var u;
+var i = 10;
+var f = 3.14;
+var b = true;
+var s = "Hello World";
+var n = function(){};
+var fn2 = function(a,b){
+	return a + b;
+}
+var o = {};
+var l = [10,20,30];
+
+console.log(u+ ":" + typeof(u));
+console.log(i+ ":" + typeof(i));
+console.log(f+ ":" + typeof(f));
+console.log(b+ ":" + typeof(b));
+console.log(s+ ":" + typeof(s));
+console.log(n+ ":" + typeof(n));
+console.log(o+ ":" + typeof(o));
+console.log(l+ ":" + typeof(l));
+
+
+console.log("=====================");
+/* 
+[5. object: new 생성자 함수를 사용해서 객체를 생성]
+Number()		-> Object
+Boolean()		-> Object
+String()		-> Object
+Object()		-> Object
+Array() 		-> Object
+cf)Function() 		-> 6. function
+*/
+var i2 = new Number(10);
+var b2 = new Boolean(10);
+var s2 = new String("Hello");
+var f2 = new Function("a","b","return a+b");
+var o2 = new Object();
+var a2 = new Array(10,20,30);
+
+console.log(i2+ ":" + typeof(i2));
+console.log(b2+ ":" + typeof(b2));
+console.log(s2+ ":" + typeof(s2));
+console.log(f2+ ":" + typeof(f2));
+console.log(o2+ ":" + typeof(o2));
+console.log(a2+ ":" + typeof(a2));
+
+var Goods = function(no,name){
+	this.no = no;
+	this.name = name;
+}
+var g = new Goods(10,'TV');
+console.log(g);
+
+/* 원시타입과 원시타입의 Wrapper 객체는 별 구분없이 연산 가능하다.  */
+console.log(i + i2);
+console.log(s + s2);
+
+/*  
+ 원시 타입도 메소드 호출이 가능하다. 
+ 원시 타입의 메소드를 호출할 때, 임시 객체가 만들어져서 메소드를 호출한 다음 사라진다.
+ */
+console.log(b.valueOf()); // new boolean(b).valueOf()로 순간 변환된다음 사라짐. 
+console.log(b2.valueOf());
+</script>
+</head>
+<body>
+	<h1> 변수와 데이터 타입</h1>
+</body>
+</html>
