@@ -52,7 +52,7 @@ console.log(o3);
 
 // XMLHttpRequest 객체를 사용해서 데이터 통신에 JSON을 사용한다. - AJAX 
 var response = '{"no" : 1, "name":"강성호", "email":"sungho@naver.com"}';
-var vo = eval("(" + response + ")");
+var vo = eval("(" + response + ")"); // eval()은 문자로 표현된 js코드를 실행하는 함수 
 console.log(vo.no + ":" + vo.name);
 
 </script>
